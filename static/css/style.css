@@ -1,0 +1,1648 @@
+/*
+Author       : theme_ocean 
+Template Name: Khan - Personal Portfolio HTML Template
+Version      : 1.0
+*/
+/*=============================================================
+    CSS INDEX
+    =============================
+    01. GENERAL STYLE (body, link color, section-title, preloader btn, overlay, section-padding etc)
+    02. START BOOTSTRAP NAVIGATION OVERRIDES
+    03. START HOMEPAGE CSS STYLE
+    04. START INTRO CSS STYLE
+    05. START ABOUT CSS STYLE
+    06. START SERVICE CSS STYLE
+    07. START SKILLS DESIGN
+    08. START PORTFILIO DESIGN
+    09. START RESUME DESIGN
+    10. START BLOG DESIGN
+    11. START TESTIMONIAL DESIGN
+    12. START CONTACT DESIGN
+    13. START FOOTER DESIGN
+    14. START SECTION TOP DESIGN
+  =============================================================*/
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+body {
+color:#777;
+font-family: 'Roboto', sans-serif;
+font-size: 15px;
+font-weight: 400;
+line-height: 26px;
+background:#fff;
+overflow-x:hidden;
+background-size: cover;
+}
+
+
+html,
+body { height: 100%;position:relative;  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0px;
+  margin-top: 0px;
+  font-family: oswald,sans-serif;
+  color: #000;
+  font-weight: 400;
+}
+a {
+	font-family: oswald,sans-serif;
+    text-decoration: none;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+	list-style:none;
+}
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+b, strong {
+	font-weight: 600;
+}
+.no-padding { padding: 0 }
+
+::-moz-placeholder { 
+  color: #000;
+}
+
+/*END PRELOADER DESIGN*/
+.section-padding { padding: 80px 0 }
+/*START SECTION TITLE DESIGN*/
+.section-title { margin-bottom:60px;position:relative; }
+.section-title h4 {
+	text-transform: uppercase;
+	font-size: 16px;
+}
+.section-title h4::after {
+	content: "";
+	display: block;
+	background: radial-gradient(ellipse at left,#ddd 30%,rgba(255,255,255,0) 70%);
+	height: 1px;
+	width: 60px;
+	margin: auto;
+}
+
+.section-title h1 {
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 400;
+}
+h2.section-title-white{color:#fff;}
+h1.section-title-white{color:#fff;}
+/*END SECTION TITLE DESIGN*/
+/*START SCROLL TO TOP*/
+.topcontrol {
+background: #6138bd none repeat scroll 0 0;
+border-radius: 30px;
+bottom: 5px;
+-webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+color: #fff;
+cursor: pointer;
+font-size: 22px;
+height: 50px;
+line-height: 47px;
+opacity: 1;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+position: fixed;
+right: 5px;
+text-align: center;
+-webkit-transition: all 0.2s ease 0s;
+-o-transition: all 0.2s ease 0s;
+transition: all 0.2s ease 0s;
+width: 50px;
+}
+@media only screen and (max-width:768px) { 
+.topcontrol {display:none;}
+}
+.topcontrol:hover {
+    background: #fff;
+    color: #1b2032;
+}
+/*END SCROLL TO TOP*/
+/*
+* ----------------------------------------------------------------------------------------
+* 01.END GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.START BOOTSTRAP NAVIGATION OVERRIDES
+* ----------------------------------------------------------------------------------------
+*/
+.site-logo img {
+	width: 120px;
+	height: auto;
+	margin-top: 10px;
+}
+.logo-hidden{
+ display:none;
+width: 120px;	
+}
+.navbar-fixed .site-logo img {
+  display:none;
+}
+.navbar-fixed .logo-hidden{
+display:block!important;	
+}
+.bg-faded {
+	background-color: transparent;
+	transition: all 0.5s ease 0s;
+}
+.navbar-fixed {
+    z-index: 999;
+    position: fixed;
+    opacity: .98;
+    width: 100%;
+	padding:10px 0;
+    top: 0;
+    -webkit-animation: fadeInDown 800ms;
+    animation: fadeInDown 800ms;
+    -webkit-backface-visibility: hidden;
+    border-radius: 0px;
+    background: #fff;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);
+}
+#navigation {
+	padding: 10px 0;
+	background-color: transparent;
+}
+#navigation.navbar-fixed {
+	padding:10px 0;
+	background:#fff;
+	border-color: #fff;
+}
+.header_right {
+	display: block;
+	flex-basis: auto;
+}
+#main-menu {
+
+}
+#main-menu ul{
+	list-style-type: none;
+	text-align: center;
+}
+#main-menu ul li{
+	display: inline-block;
+	margin-left:20px;
+	position: relative;
+}
+#main-menu ul li a {
+	color: #fff;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: oswald,sans-serif;
+	transition: .5s;
+	font-size: 14px;
+	padding: 24px 0 26px;
+	display: block;
+	letter-spacing: 2px;
+}
+#navigation.navbar-fixed #main-menu ul li a{
+	color: #777;
+	padding: 22px 0 22px;
+}
+#navigation.navbar-fixed #main-menu ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li a:focus,
+#main-menu ul li a:hover,
+#main-menu ul li a:focus{
+	color: #000;
+}
+#main-menu ul li > a:hover,
+#main-menu ul li > a:focus{
+
+	color: #000;
+}
+#navigation #main-menu ul li a:hover,
+#navigation #main-menu ul li a:focus,
+#navigation.navbar-fixed #main-menu ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li a:focus{
+}
+#navigation.navbar-fixed #main-menu ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li a:focus{
+	color: #000;
+}
+
+.slicknav_menu {
+	font-size: 16px;
+	box-sizing: border-box;
+	background: #404c8a;
+	padding: 0px;
+}
+.slicknav_nav_icon{
+	color: #000;
+	font-size: 24px;
+}
+#mobile_menu{
+	display: none;
+}
+.slicknav_nav ul {
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0 0 0 20px;
+	height: 50vh;
+	overflow-y: scroll;
+}
+/* Responsive Design */
+@media only screen and (max-width:1024px) { 
+#main-menu ul li {
+	margin-left: 30px;
+}
+}
+/*END 1024px*/
+@media only screen and (max-width: 991px){	
+#main-menu ul li {
+	margin-left: 9px;
+}
+#main-menu ul li a {
+	font-size: 15px;
+}
+#navigation {
+	padding: 10px 0 20px;
+	background: #404c8a;
+}
+}
+/*END 991px*/
+@media only screen and (max-width: 880px){
+#main-menu{
+display: none;
+}
+#mobile_menu{
+display: block;
+width: 100%;
+}
+.slicknav_nav{
+background-color: #404c8a;
+}
+#navigation #mobile_menu li a{
+color: #fff;
+font-weight: 400;
+}
+#navigation #mobile_menu li li a{
+color: #fff;
+}
+#navigation #mobile_menu li i{
+display: none;
+}
+#navigation ul li ul, #navigation ul {
+transition: .0;
+}
+#navigation.navbar-fixed #mobile_menu li a{
+color: #fff;
+}
+.slicknav_nav a{
+padding: 5px 0px;
+transition: .3s;
+}
+#navigation #mobile_menu li a:hover,
+#navigation #mobile_menu li a:focus{
+color: #fff;
+}
+.slicknav_btn {
+top: 24px;
+background:#404c8a;
+}
+}
+/*END 767px*/
+
+@media only screen and (max-width: 575px){
+.slicknav_btn {
+margin: 0;
+text-decoration: none;
+position: absolute;
+top: 35px;
+right: 17px;
+}
+.ti-angle-down {
+	display: none;
+}
+}
+/*END 575px*/
+/*-------------------------------
+# Dropdwon menu 
+--------------------------------*/
+
+#navigation #main-menu ul li ul ,
+#navigation #main-menu ul li ul li ul {	
+	background: #404c8a;
+	box-shadow: 0 0 10px 3px rgba(0,0,0,.05);
+	left: -55px;
+	list-style: outside none none;
+	margin:  0;
+	opacity: 0;
+	padding:10px;
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	width: 200px;
+	z-index: 999;
+	border-radius: 4px;
+	border-top: 2px solid #fff;
+}
+#navigation #main-menu ul li  ul li{
+	position: relative;
+}
+#navigation #main-menu ul li ul li ul{
+	top: 0;
+	right: auto;
+	left: 205px;
+}
+#navigation.navbar-fixed #main-menu ul li li a{
+	color: #fff;
+} 
+#navigation #main-menu ul li:hover ul,
+#navigation #main-menu ul li ul li:hover > ul{
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; 
+	visibility: visible;
+}
+#navigation #main-menu ul li ul li {display: block; margin: 0; padding: 0;}
+
+#navigation.navbar-fixed #main-menu ul li ul li a,
+#navigation #main-menu ul li ul li a {
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: oswald,sans-serif;
+	padding: 5px 12px;
+	position: relative;	
+	transition: all 0.3s ease 0s !important;
+	visibility: inherit !important;
+	opacity: inherit !important;
+	text-transform: uppercase;
+}
+
+#navigation #main-menu ul li ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li ul li a:focus{
+	color: #fff;
+	background-color: #404c8a;
+	text-decoration: none;
+}
+
+
+@media only screen and (max-width:767px) { 
+  .navbar-brand {
+    padding-top: 20px;
+  }
+}
+.social_profile {
+	margin-top: 25px;
+}
+@media only screen and (max-width:880px) { 
+.social_profile {
+	display:none;
+}
+}
+.social_profile ul{
+list-style: outside none none;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+.social_profile ul li{
+display: inline-block;
+}
+@media only screen and (max-width:480px) { 
+.social_profile ul li{margin:5px;}
+}
+.social_profile ul li a {
+	color: #fff;
+	float: left;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0;
+	padding: 0px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	width: 100%;
+}
+#navigation.navbar-fixed .social_profile ul li a{color:#000;}
+/*END SOCIAL DESIGN*/
+/*
+* ----------------------------------------------------------------------------------------
+* 02.END BOOTSTRAP NAVIGATION OVERRIDES
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03. START HOMEPAGE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.home_bg{
+height:750px;
+position:relative;
+}
+.home_bg:before {
+    background:rgba(34,34,34,0.85);
+    content: "";
+    height: 100%;
+    filter: alpha(opacity=80);
+    position: absolute;
+    width: 100%;
+}
+.about_me_content{padding-top:200px;position:relative;}
+@media only screen and (max-width:768px) { 
+.about_me_content{padding-left:30px;padding-right: 20px;}
+}
+.about_me_content h1 {
+	font-size: 60px;
+	font-weight: 300;
+	/* line-height: 79px; */
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 500;
+}
+.about_me_content h1 span {
+	color: transparent;
+	-webkit-text-stroke: 1px #fff;
+	text-transform: capitalize;
+}
+.about_me_content p {
+	font-size: 20px;
+	margin-top: 30px;
+	color: #fff;
+}
+ @media only screen and (max-width:480px){
+.about_me_content h1 {font-size: 40px;line-height:50px;}
+ }
+ 
+@media only screen and (max-width:480px){
+ .home_btn {margin-left: 30px;}
+}
+@media only screen and (max-width:480px){
+ .home_btn {margin-top: 30px;}
+}
+
+.home_btn a {
+	display: inline-block;
+	margin-right: 30px;
+}
+.home_one {
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 5px;
+	color: #000;
+	font-size: 15px;
+	padding: 14px 40px;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+	border-radius: 100px;
+	letter-spacing: 1px;
+	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.1);
+}
+.home_one:hover, .home_one:focus{
+background:#000;
+border: 1px solid #000;	
+color: #fff;
+}
+
+ .video-play {
+	margin-left: 30px;
+}
+@media only screen and (max-width:480px){
+.video-play {
+	margin-top: 30px;
+	display: block;
+}
+}
+.video-play i {
+	background: #000;
+	border:1px solid #000;
+	color: #fff;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 100px;
+	margin-right:15px;
+	display: inline-block;
+	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.15);
+	transition: all 0.3s ease 0s;
+}
+.video-play:hover i{
+background: #fff;
+border:1px solid #000;
+color:#000;
+}
+.video-title {
+	font-weight: 400;
+	color: #000;
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+ /*Image style coding*/
+.profile_img{padding-top:200px;}
+@media only screen and (max-width:812px){
+.profile_img{padding-top:100px;text-align: center;}
+}
+.profile_img img {}
+
+.home_socials{}
+.home_socials ul{}
+.home_socials ul li{float:left;}
+.home_socials ul li a {
+	color: #1b1e22;
+	margin-right: 15px;
+	font-size: 20px;
+	transition: 0.3s;
+}
+.home_socials ul li a:hover{color:#6138bd;}
+/*
+* ----------------------------------------------------------------------------------------
+* 03. END HOMEPAGE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04. START INTRO CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.intro_area{padding-bottom:50px;}
+.single_intro {
+	background: #404C8A;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	transition: all 0.3s ease 0s;
+	padding: 60px;
+	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.03);
+}
+.single_intro span {
+	font-size: 50px;
+	display: inline-block;
+	margin-bottom: 30px;
+	transition: 0.3s;
+}
+.single_intro h3 {
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 04. END INTRO CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05. START ABOUT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.about_img{}
+.about_img{} 
+@media only screen and (max-width:768px){
+.about_img {margin-bottom:60px;}
+}
+.about_img img {
+	width: 100%;
+	padding-right: 40px;
+	position:relative;
+}
+ @media only screen and (max-width:768px){
+.about_img img{padding-right:0px;}
+ }
+.experience {
+	position: absolute;
+	margin-top: -150px;
+	background: #404C8A;
+	padding: 20px;
+	border-radius: 10px;
+	/* text-align: center; */
+}
+.experience h4{color:#fff;}
+ 
+.about_info{margin-top:30px;}
+.about_info span {
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	display: inline-block;
+	font-family: oswald,sans-serif;
+}
+.about_info h4{margin-bottom: 20px;}
+.about_info p{margin-bottom: 30px;}
+.about_me_contact_info {}
+.profile_info {
+line-height:32px;
+}
+.profile_info .th {
+	font-weight: 700;
+	width: 95px;
+	color: #000;
+	display: block;
+	float: left;
+	text-align: left;
+}
+.profile_info .td {
+	overflow: hidden;
+	display: block;
+}
+.h_email .td a{color:#FEB139;}
+.h_website .td a{color:#FEB139;}
+
+.download_btn{margin-top:40px;}
+.download_btn a{}
+/*
+* ----------------------------------------------------------------------------------------
+* 05. END ABOUT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 06. START SERVICE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.service_area{padding-bottom:30px;}
+.single_service{margin-bottom:50px;}
+.single_service_img {
+	-webkit-box-shadow:0 10px 40px -10px rgba(0,64,128,.2);
+	        box-shadow:0 10px 40px -10px rgba(0,64,128,.2);
+	width: 80px;
+	height: 80px;
+	background:#fff;
+	line-height: 80px;
+	text-align: center;
+	border-radius: 50%;
+	margin-right: 20px;
+	float: left;
+	margin-bottom: 20px;
+}
+.single_service_img img {
+	width: 50px;
+	height: 50px;
+}
+.single_service{}
+.single_service h3 {
+	margin-bottom: 15px;
+	overflow: hidden;
+	font-weight: 500;
+	font-size: 20px;
+}
+.single_service p{padding-right:40px;overflow: hidden;}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06. END SERVICE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07. START SKILLS CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.skills_area {
+	background: linear-gradient(90deg, rgb(236, 255, 252) 0%, rgb(253, 250, 239) 35%, rgb(251, 251, 251) 100%);
+	padding-bottom: 50px;
+}
+.progress-bar-linear {
+	margin-right: 60px;
+}
+@media only screen and (max-width:480px) { 
+.progress-bar-linear {
+	margin-right:0px;
+}
+}
+.progress-bar-title {
+	font-size: 25px;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+.progress-bar-text {
+	font-size: 18px;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+	color: #776e6e;
+	font-family: 'Roboto', sans-serif;
+}
+.progress-bar-text span { float: right }
+.progress-bar {
+	background: #e8e8e9 none repeat scroll 0 0;
+	box-shadow: 0 0 0;
+	height: 5px;
+	margin: 0 0 30px;
+	position: relative;
+	width: 100%;
+	border-radius: 10px;
+}
+.progress-bar > span {
+    background: #000 none repeat scroll 0 0;
+    display: block;
+    height: 100%;
+    width: 0;
+	border-radius: 10px;
+}
+.single-project-complete {
+	border: 1px solid rgba(255,255,255,0.2);
+	text-align: center;
+	padding: 20px 0;
+	background: #000;
+	border-radius: 10px;
+}
+@media only screen and (max-width:480px) { 
+.single-project-complete{
+border-bottom: 0px;
+border-right: 0px;
+margin-bottom:30px;
+}
+}
+.brnone{border-right: 0px ;}
+.single-project-complete h2 {
+font-size: 45px;
+font-weight:700;
+}
+.single-project-complete h2:after {
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	border-top: 1px solid rgba(255,255,255,0.2);
+	content: "";
+	display: block;
+	height: 4px;
+	margin: 20px auto;
+	width: 70px;
+}
+.single-project-complete h3 {
+font-size: 15px;
+font-weight:600;
+margin-bottom: 20px;
+margin-top: 0;
+text-transform: uppercase;
+}
+/*END COUNTER*/
+/*
+* ----------------------------------------------------------------------------------------
+* 07. END SKILLS CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08. START PORTFILIO CSS DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.portfolio_area {
+	padding-bottom: 50px;
+}
+.mix{
+	display: none;
+}
+.portfolio_filter ul {
+	list-style: none;
+	margin-bottom: 60px;
+}
+@media only screen and (max-width:768px) { 
+.portfolio_filter ul{width:100%;}
+}
+.portfolio_filter ul li {
+	text-transform: uppercase;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0px 15px;
+	font-size: 14px;
+	color: #777;
+	transition: .5s;
+	margin: 0 3px 0px;
+	border-right: 2px solid #eee;
+	letter-spacing: 2px;
+	font-family: oswald, sans-serif;
+}
+@media only screen and (max-width:480px) { 
+.portfolio_filter ul li{margin-bottom:10px;}
+}
+.portfolio_filter ul li:last-child {
+	border-right: 0px;
+}
+.portfolio_filter .active {
+	color: #000;
+}
+.box{
+    overflow: hidden;
+    position: relative;
+}
+.box:after{
+	content: "";
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.99);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: rotateY(-90deg);
+    transform-origin: 50% -50% 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+.box:hover:after{
+    transform: rotateY(0deg);
+    visibility: visible;
+    opacity:0.9;
+}
+.box img{
+    width: 100%;
+    height: auto;
+}
+.box .box-content{
+    text-align: left;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    transform: translate(0%, 0%);
+    transition: all 0.5s ease 0s;
+	width: 90%;
+	bottom: 20px;
+	background-color: #fff;
+	padding: 15px 20px;
+}
+.box:hover .box-content{
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.box .title{
+	margin-bottom: 0px;
+}
+.box .title a {
+	color: #000;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 0;
+	text-transform: capitalize;
+	/* letter-spacing: 1px; */
+}
+.port-cat {
+	font-size: 14px;
+	color: #777;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+.port-icon{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #000;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	z-index: 99;
+	opacity: 1;
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+}
+.single-portfolio{
+	border: 5px solid #222;
+}
+.portfolio-details-content{
+	padding-top: 20px;
+	border-top: 1px solid #ddd;
+	margin-top: 20px;
+}
+.portfolio-details-content .port-title{
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+/*END PORTFOLIO SINGLE PAGE DESIGN*/
+/*END PORTFOLIO SINGLE PAGE DESIGN*/
+.single_project_area{}
+.single_project_details{background:#fff;padding:60px;box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);}
+.single_project_details img{}
+.single_project_details h1 {
+	margin: 20px 0;
+	font-size: 50px;
+	line-height: 60px;
+	text-transform: capitalize;
+	font-weight: 400;
+}
+@media only screen and (max-width: 480px){
+.single_project_details h1 {
+	margin: 20px 0;
+	font-size: 30px;
+	line-height: 45px;
+}
+}
+.project_details_info {
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.project_details_info h4 {
+	font-weight: 500;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+.project_details_info ul {
+	list-style: none;
+}
+.project_details_info ul li {
+	line-height: 32px;
+}
+.project_details_info ul li i {
+	color: #000;
+	margin-right: 10px;
+}
+.project_details_info ul li  a{color:#000;}
+.single_project_details p{}
+/*END SINGLE PROJECT DETAILS*/
+/*
+* ----------------------------------------------------------------------------------------
+* 08. END PORTFILIO CSS DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.video_bg {
+	padding: 150px 0;
+	border-radius: 10px;
+}
+.play_btn_two i {
+	background: #404c8a;
+	color: #fff;
+	width: 100px;
+	height: 100px;
+	line-height:100px;
+	text-align: center;
+	border-radius: 100px;
+	margin-right:15px;
+	display: inline-block;
+	font-size: 30px;
+	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.15);
+	transition: all 0.3s ease 0s;
+}
+.play_btn_two:hover i{
+background: #fff;
+color:#000;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 09. START RESUME CSS DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.refer_area {
+	padding-bottom: 50px;
+	background:linear-gradient(90deg, rgb(236, 255, 252) 0%, rgb(253, 250, 239) 35%, rgb(251, 251, 251) 100%);
+}
+.our-team{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+	margin-bottom: 30px;
+}
+.our-team img{
+    width: 100%;
+    height: auto;
+    transition: all 0.50s linear 0s;
+}
+.our-team:hover img{
+    transform: scale(1.2);
+}
+.our-team .team-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.our-team:hover .team-content{
+    opacity: 1;
+}
+.our-team .team-prof {
+	margin: 20px 0;
+	position: relative;
+	top: 13%;
+	font-size: 25px;
+	font-weight: 600;
+	color: #fff;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.our-team .team-prof small {
+	display: block;
+	font-size: 14px;
+	color: #fff;
+	margin-top: 10px;
+	text-transform: capitalize;
+	font-weight: 300;
+}
+.our-team .social-link{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    top: 13%;
+}
+.our-team .social-link li{
+    margin-right: 5px;
+    display: inline-block;
+}
+.our-team .social-link li a{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius:30px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+}
+.our-team .social-link li a:hover{
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+}
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 20px; }
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 09. END RESUME CSS DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.gallery_area {
+	padding-bottom: 50px;
+}
+.grid {
+	margin-bottom: 30px;
+}
+.grid figure {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.grid figure img {
+    position: relative;
+    display: block;
+    width: 100%;
+	border-radius:10px;
+    opacity: 1;
+    filter: alpha(opacity=80);
+}
+.grid figure figcaption {
+    padding: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.grid figure h4 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+.grid figure h4,
+.grid figure p { margin: 0 }
+.grid figure p {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.grid figure p a { color: #fff }
+figure.effect-sadie figcaption:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.1);
+    content: '';
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate3d(0,50%,0);
+    transform: translate3d(0,50%,0);
+}
+figure.effect-sadie h4 {
+    background: #fff none repeat scroll 0 0;
+    color: #222;
+    font-size: 18px;
+    left: 20%;
+    letter-spacing: 1px;
+    padding: 15px 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3d(0px, -50%, 0px);
+            transform: translate3d(0px, -50%, 0px);
+    -webkit-transition: -webkit-transform 0.35s ease 0s, color 0.35s ease 0s;
+            transition: transform 0.35s ease 0s, color 0.35s ease 0s;
+    width: 60%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+figure.effect-sadie figcaption:before,
+figure.effect-sadie p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-sadie p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+}
+figure.effect-sadie:hover figcaption:before,
+figure.effect-sadie:hover p {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 10. START BLOG DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.blog_area {
+	padding-bottom: 50px;
+	background:linear-gradient(90deg, rgb(236, 255, 252) 0%, rgb(253, 250, 239) 35%, rgb(251, 251, 251) 100%);
+}
+.single_blog {
+	background: #fff;
+	border-radius:0px;
+	margin-bottom: 30px;
+	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.03);
+}
+.content_box{padding: 35px;}
+.single_blog h2 {
+	line-height: 34px;
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+.single_blog h2 a {
+	color: #000;
+	font-weight:400;
+}
+.single_blog p{margin-bottom:0px;}
+.single_blog span {
+	text-transform: capitalize;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+.single_blog span a{
+color:#000;
+font-weight:600;
+}
+.single_blog_two span{margin-top:0px;}
+.single_blog_two p{margin-bottom:30px;}
+
+/*START SINGLE PAGE BLOG STYLE*/
+.contact_form_blog{padding-top:0px!important;}
+.blog_sidebar_title {
+	border-bottom: 1px solid #eee;
+	color: #000;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: x;
+	margin-bottom: 15px;
+	margin-top: 0;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+.blog_search, .latest_blog, .advertisement_post, .video_post, .categories, .tag, .banner {
+	margin-bottom: 30px;
+	background: #fff;
+	padding: 30px 30px;
+	border-radius:10px;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);
+}
+.tag{overflow: hidden;}
+.blog_search{}
+.blog_search input {
+background: none;
+border: 1px solid #fff;
+border-radius: 0;
+color: #fff;
+-webkit-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+height: 50px;
+}
+.blog_search input:focus{border: 1px solid #72c02c;}
+.single_latest_blog {
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+}
+.single_latest_blog h4 {
+	/* color: #fff; */
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 28px;
+	margin: 0;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.single_latest_blog span { color: #161616 }
+.single_upcoming_event {margin-bottom: 20px;}
+.single_upcoming_event h4 {
+	color: #000;
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 28px;
+	margin: 10px 0 0;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.single_upcoming_event:hover h4 { color: #000 }
+.single_upcoming_event span i{margin-right:5px;color: #fff }
+.single_upcoming_event span { color: #777 }
+.categories ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.categories ul li { }
+.categories ul li a {
+	color: #000;
+	display: block;
+	font-size: 14px;
+	padding: 5px 0;
+	font-weight: 400;
+}
+.categories ul li a:hover { color: #000;}
+.categories ul li a i { margin-right: 10px }
+.video_post iframe {
+    width: 100%;
+    height: 100%;
+    border: medium none;
+}
+.tag a {
+	border: 2px solid #000;
+	border-radius: 30px;
+	color: #000;
+	display: block;
+	float: left;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 6px 4px;
+	padding: 3px 20px;
+	text-transform: capitalize;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	background:none;
+}
+.tag a:hover {
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+}
+/*END BLOG SIDEBAR DESIGN*/
+/*START BLOG SINGLE PAGE DESIGN*/
+.bc_left {
+	padding-left: 30px;
+	font-style: italic;
+	font-weight: 600;
+}
+.bc_bottom{margin-bottom:30px;}
+.blog-img img {
+	width: 100%;
+}
+.author_part {
+	margin-bottom: 30px;
+	overflow: hidden;
+	margin-top: 60px;
+}
+.single_author {
+	background: #fff;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.author_part img {
+	border-radius: 100px;
+	float: left;
+	height: 120px;
+	margin-right: 20px;
+	width: 120px;
+}
+.author_part h4 {text-transform: uppercase;
+font-size: 16px;
+font-weight:700;
+letter-spacing: 1px; }
+.author_part p { margin-bottom: 0 }
+.blog_head_title {
+	border-bottom: 1px solid #e1dddd;
+	margin: 0 0 30px;
+	padding-bottom: 10px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+.comments_part {
+    margin-bottom: 60px;
+}
+.single_comment {
+	margin-bottom: 30px;
+	background: #fff;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);
+	overflow: hidden;
+}
+.single_comment_mbnone { margin-bottom: 0px }
+.single_comment img {
+    border-radius: 100px;
+    float: left;
+    height: 120px;
+    margin-right: 20px;
+    width: 120px;
+}
+.single_comment h4 {
+	font-size: 16px;
+	font-weight: 500;
+	/* letter-spacing: 1px; */
+	text-transform: uppercase;
+}
+.single_comment p { margin-bottom: 0 }
+.comment-box {
+	border-radius: 10px;
+}
+.comment_form input, .comment_form textarea {
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+}
+.comment_form textarea {}
+/*END SINGLE PAGE BLOG STYLE*/
+/*
+* ----------------------------------------------------------------------------------------
+* 10. END BLOG DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+ 
+
+/*
+* ----------------------------------------------------------------------------------------
+* 12.START CONTACT DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.contact_us {position:relative;}
+.contact_us::before {
+	background:rgba(34,34,34,0.85);
+	bottom: 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+.contact {
+	position: relative;
+}
+@media only screen and (max-width:768px) { 
+.contact {margin-top:60px;margin-right:0px;}
+}
+.contact h4 {font-weight: 700;font-size: 40px;}
+.contact p {
+margin-bottom:40px;
+}
+.contact input {
+	background:linear-gradient(90deg, rgb(236, 255, 252) 0%, rgb(253, 250, 239) 35%, rgb(251, 251, 251) 100%);
+	border: 1px solid #f7f7f7;
+	border-radius: 10px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #000;
+	font-size: 18px;
+	height: 70px;
+	padding: 10px 10px 10px 30px;
+	width: 100%;
+	margin-bottom: 30px;
+	font-family: oswald,sans-serif;
+	/* text-transform: capitalize; */
+}
+.contact textarea {
+background: linear-gradient(90deg, rgb(236, 255, 252) 0%, rgb(253, 250, 239) 35%, rgb(251, 251, 251) 100%);
+border: 1px solid #f7f7f7;
+	border-radius: 10px;
+	font-family: oswald,sans-serif;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	color: #000;
+	font-size:18px;
+	padding: 10px 10px 10px 30px;
+	width: 100%;
+	margin-bottom:30px;
+}
+.contact input:focus {
+background:linear-gradient(90deg, rgb(236, 255, 252) 0%, rgb(253, 250, 239) 35%, rgb(251, 251, 251) 100%);
+	border: 1px solid #f7f7f7;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: 0 none;
+	color: #000;
+}
+.contact textarea:focus {
+	background:linear-gradient(90deg, rgb(236, 255, 252) 0%, rgb(253, 250, 239) 35%, rgb(251, 251, 251) 100%);
+	border: 1px solid #f7f7f7;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+	color: #000;
+}
+.contact button {
+	font-size: 16px;
+}
+.address_area {
+	padding-bottom: 50px;
+}
+.single_address {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+@media only screen and (max-width:768px) { 
+.single_address {
+	margin-bottom: 30px;
+	margin-right: 0px;
+}
+}
+.address_br {
+	float: left;
+	background: #000;
+	width: 50px;
+	height: 80px;
+	text-align: center;
+	margin-right: 30px;
+}
+.address_br span {
+	color: #fff;
+	font-size: 30px;
+	display: block;
+	line-height: 80px;
+}
+.single_address h4 {
+	font-weight: 400;
+	font-size: 18px;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+.single_address p{overflow: hidden;}
+.single_address p span{color:#444;}
+.single_address p a {
+	color: #777;
+	font-family: 'Roboto', sans-serif;
+}
+.contact_btn {
+	background: #000;
+	padding: 16px;
+	color: #fff;
+	text-transform: capitalize;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	font-family: oswald,sans-serif;
+	text-transform: uppercase;
+	border: 2px solid #000;
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	border-radius: 500px;
+}
+.contact_btn:hover{background:#000;color: #fff;border:2px solid #000;}
+.form-control::placeholder {
+	color: #777;
+	opacity: 1;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 12.END CONTACT DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 13.START FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.footer {
+	padding: 60px 0;
+	border-top: 1px solid #000;
+	background: #000;
+}
+.footer_scroll_top a{
+color:#fff;
+text-transform: uppercase;
+letter-spacing: 1px;
+} 
+.copyright {
+	font-family: 'oswald', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+}
+@media only screen and (max-width:880px) { 
+.copyright {text-align:center;}
+}
+.footer_menu{float: right;}
+@media only screen and (max-width:880px){
+.footer_menu {
+float: none;
+	display: inline-block;
+	margin-top:0px;
+}
+}
+.footer_menu ul{list-style:none;}
+.footer_menu ul li{float:left;}
+.footer_menu ul li a {
+	color: #fff;
+	padding: 0px 10px;
+	transition: 0.3s;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.footer_menu ul li a:hover{
+color:#FEB139;
+text-decoration: underline;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 13.END FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 14.START SECTION TOP DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 14.END SECTION TOP DESIGN
+* ----------------------------------------------------------------------------------------
+*/
