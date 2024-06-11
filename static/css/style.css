@@ -491,6 +491,10 @@ position:relative;
 	color: #fff;
 	font-weight: 500;
 }
+.about_me_content h3  {
+	color: #fff;
+	text-transform: capitalize;
+}
 .about_me_content h1 span {
 	color: transparent;
 	-webkit-text-stroke: 1px #fff;
